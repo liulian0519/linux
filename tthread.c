@@ -1,3 +1,4 @@
+/*需要加锁  输出不一致*/
 #include<stdio.h>
 #include<sys/types.h>
 #include<unistd.h>
