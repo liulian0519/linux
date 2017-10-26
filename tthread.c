@@ -32,6 +32,7 @@ int main(int argc,char *argv[])
                 }
                 printf("%llu/%llu",main_counter,sum);
         }while((ch=getchar())!='q');
+	//销毁锁资源
         return 0;
 }
 void *thread_worker(void *p)
@@ -41,8 +42,10 @@ void *thread_worker(void *p)
         thread_num=(int)(p);
         for(;;)
         {/* 无限循环 */
+		// 加锁
                 counter[thread_num]++;/* 本线程的counter加一 */ 
                 main_counter++;/* 主counter 加一 */
+		//解锁
         }
 }
 
