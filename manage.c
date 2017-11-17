@@ -241,7 +241,7 @@ void rearrange_WF()
         work = tmp->next;
         while(work!=NULL)
         {
-            if( work->size > tmp->size) /*地址递减*/
+            if( work->size > tmp->size) /*内存大小递减*/
             {
                 swap(&work->start_addr, &tmp->start_addr);
                 swap(&work->size, &tmp->size);
